@@ -1,14 +1,15 @@
+/* styles.css */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #87CEEB; /* Sky Blue */
+    color: #333; /* Dark gray for readability */
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #87CEEB, #B0E0FF);
-    color: #333;
 }
 
 header {
-    background-color: rgba(70, 130, 180, 0.9); /* Steel blue with transparency */
+    background-color: #4682B4; /* Steel blue */
     color: white;
     padding: 20px;
     text-align: center;
@@ -19,7 +20,42 @@ main {
     max-width: 500px;
     margin: 40px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white card */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#submitButton {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#submitButton:hover {
+    background-color: #0056b3;
 }
