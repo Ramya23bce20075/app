@@ -5,110 +5,77 @@
     box-sizing: border-box;
 }
 
-/* Body styling with advanced background */
+/* Body styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
+    background-color: #87CEEB; /* Sky blue background */
     color: #333;
-    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, #87CEEB, #B0E0FF, #ADD8E6); /* Sky-blue gradient */
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
 }
 
-/* Gradient Animation */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Glassmorphism container */
+/* Container for content */
 .container {
-    position: relative;
-    z-index: 1;
-    max-width: 500px;
-    width: 90%;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Glass effect */
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-    margin: 20px;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Ensure labels and inputs are aligned */
 }
 
-/* Headings - Bold with Emojis */
-h1,
-h2,
-h3 {
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #2c3e50;
+/* Headings */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-/* Emoji before headings */
-h1::before,
-h2::before,
-h3::before {
-    content: "🌤 ";
-    margin-right: 8px;
-}
-
-/* Paragraphs - simple readable font */
+/* Paragraphs */
 p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
-    color: #555;
 }
 
-/* Form Styling */
+/* Form elements */
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 15px; /* Spacing between form elements */
 }
 
-/* Ensure labels are bold */
+/* Labels */
 label {
-    font-weight: bold; /* Make the text bold */
-    color: #333; /* Dark gray for readability */
-    margin-top: 15px; /* Spacing between labels */
-    display: block; /* Ensures labels stack vertically */
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; /* Ensure labels stack above inputs */
 }
 
+/* Input fields */
 input {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
+    padding: 10px;
     width: 100%;
-    transition: border-color 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
-input:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-/* Buttons - vibrant color */
+/* Buttons */
 button {
-    background-color: #007bff; /* Modern blue */
+    background-color: #007bff;
     color: white;
-    padding: 14px;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker on hover */
+    background-color: #0056b3;
 }
 
 /* Responsive adjustments */
