@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Body */
+/* Body - Full viewport height with centering */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom right, #b3e5fc, #e0f7ff);
@@ -32,29 +32,23 @@ body {
   z-index: -1;
 }
 
-/* Container for content */
+/* Container for content - Wider and centered */
 .container {
-  max-width: 600px; /* Limit the width of the container */
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  max-width: 800px; /* Increased width */
+  width: 90%; /* Responsive fallback */
+  margin: auto; /* Auto margins for perfect centering */
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center; /* Center all content in the container */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  gap: 20px; /* Add spacing between elements */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center; /* Center inner elements */
 }
 
 /* Header */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-  z-index: 1;
-}
-
 header h1 {
   font-weight: bold;
   font-size: 28px;
+  margin-bottom: 20px;
 }
 
 /* Navigation */
@@ -78,14 +72,7 @@ nav a {
 
 /* Pages */
 .page {
-  max-width: 500px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 80px;
   display: none;
-  z-index: 1;
 }
 
 .page.active {
@@ -93,8 +80,10 @@ nav a {
 }
 
 /* Headings */
-h2::before {
-  margin-right: 8px;
+h2 {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
 }
 
 /* Form */
@@ -102,12 +91,14 @@ form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-top: 10px;
+  text-align: left;
 }
 
 label {
   font-weight: bold;
   margin-top: 10px;
-  display: block; /* Ensure labels stack above inputs */
+  text-align: left;
 }
 
 input {
@@ -139,11 +130,13 @@ button:hover {
   border-left: 4px solid #007bff;
   padding: 15px;
   margin-top: 20px;
+  text-align: left;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .container {
-    max-width: 90%; /* Adjust for smaller screens */
+    padding: 20px;
+    max-width: 95%;
   }
 }
