@@ -15,7 +15,8 @@ body {
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   position: relative;
-  padding: 40px 20px;
+  margin: 0;
+  padding: 0;
 }
 
 /* Watermark overlay */
@@ -25,7 +26,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://i.ibb.co/6FqW7D2/shield.png');  /* Security watermark icon */
+  background-image: url('https://i.ibb.co/6FqW7D2/shield.png'); 
   background-repeat: repeat;
   background-size: 200px 200px;
   opacity: 0.05;
@@ -34,15 +35,14 @@ body {
 
 /* Container for content - Wider and centered */
 .container {
-  max-width: 800px; /* Increased width */
-  width: 90%; /* Responsive fallback */
-  margin: auto; /* Auto margins for perfect centering */
-  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  max-width: 800px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  text-align: center; /* Center inner elements */
-  position: relative; /* Ensure proper stacking with other elements */
+  text-align: center;
+  position: relative;
 }
 
 /* Header */
