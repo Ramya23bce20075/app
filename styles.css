@@ -45,11 +45,17 @@ body {
   position: relative;
 }
 
-/* Header */
-header h1 {
+/* Side Heading */
+.side-heading {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20px;
+  text-align: left;
+  font-size: 36px;
   font-weight: bold;
-  font-size: 28px;
-  margin-bottom: 20px;
+  color: #333;
 }
 
 /* Navigation */
@@ -139,5 +145,8 @@ button:hover {
   .container {
     padding: 20px;
     max-width: 95%;
+  }
+  .side-heading {
+    font-size: 24px; /* Reduce font size for smaller screens */
   }
 }
