@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Fraud Detector</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Watermark Background -->
+  <div class="watermark"></div>
+
+  <header>
+    <h1>Online Payment Fraud Detection System</h1>
+  </header>
+
+  <nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('predict')">Predict</a>
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home" class="page active">
+    <h2>Welcome to Online Payment Fraud Detection</h2>
+    <p>This system predicts whether an online transaction is fraudulent based on the values you enter.</p>
+    <p>Click on the "<strong>Predict</strong>" link above to begin checking transactions.</p>
+  </div>
+
+  <!-- Predict Page -->
+  <div id="predict" class="page">
+    <h2>Enter Transaction Details</h2>
+    <form id="fraudForm">
+      <label for="amount">Amount ($)</label>
+      <input type="number" step="0.01" id="amount" name="amount" required />
+
+      <label for="oldBalanceOrig">Old Balance (Sender)</label>
+      <input type="number" step="0.01" id="oldBalanceOrig" name="oldBalanceOrig" required />
+
+      <label for="newBalanceOrig">New Balance (Sender)</label>
+      <input type="number" step="0.01" id="newBalanceOrig" name="newBalanceOrig" required />
+
+      <label for="oldBalanceDest">Old Balance (Receiver)</label>
+      <input type="number" step="0.01" id="oldBalanceDest" name="oldBalanceDest" required />
+
+      <label for="newBalanceDest">New Balance (Receiver)</label>
+      <input type="number" step="0.01" id="newBalanceDest" name="newBalanceDest" required />
+
+      <button type="submit">Check for Fraud</button>
+    </form>
+  </div>
+
+  <!-- Result Page -->
+  <div id="result" class="page">
+    <h2>Result</h2>
+    <div id="resultMessage" class="result" style="display: none;"></div>
+    <div style="text-align:center; margin-top:20px;">
+      <a onclick="showPage('predict')" style="color:#007bff;">← Predict Again</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
