@@ -73,10 +73,12 @@ form {
     gap: 15px;
 }
 
+/* Ensure labels are bold */
 label {
-    font-weight: bold;
-    color: #333;
-    text-align: left;
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Dark gray for readability */
+    margin-top: 15px; /* Spacing between labels */
+    display: block; /* Ensures labels stack vertically */
 }
 
 input {
