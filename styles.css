@@ -7,6 +7,19 @@
 
 /* Body */
 /* Background Image */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #b3e5fc, #e0f7ff);
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 40px 20px;
+}
+
 body::before {
   content: "";
   position: absolute;
