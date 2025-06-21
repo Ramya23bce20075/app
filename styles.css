@@ -6,20 +6,17 @@
 }
 
 /* Body */
-
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom right, #b3e5fc, #e0f7ff);
   color: #333;
   min-height: 100vh;
-  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative;
   padding: 40px 20px;
 }
-
 
 /* Watermark overlay */
 .watermark {
@@ -32,7 +29,20 @@ body {
   background-repeat: repeat;
   background-size: 200px 200px;
   opacity: 0.05;
-  z-index: 0;
+  z-index: -1;
+}
+
+/* Container for content */
+.container {
+  max-width: 600px; /* Limit the width of the container */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center all content in the container */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 20px; /* Add spacing between elements */
 }
 
 /* Header */
@@ -92,16 +102,17 @@ form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 10px;
 }
 
 label {
   font-weight: bold;
   margin-top: 10px;
+  display: block; /* Ensure labels stack above inputs */
 }
 
 input {
   padding: 10px;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
@@ -128,4 +139,11 @@ button:hover {
   border-left: 4px solid #007bff;
   padding: 15px;
   margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%; /* Adjust for smaller screens */
+  }
 }
